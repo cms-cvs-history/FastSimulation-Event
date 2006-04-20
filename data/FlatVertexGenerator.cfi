@@ -1,0 +1,10 @@
+PSet VertexGenerator = 
+{
+	string type = "Flat"
+        double MinX = -0.015
+        double MaxX =  0.015
+        double MinY = -0.015
+        double MaxY =  0.015
+        double MinZ = -53.
+        double MaxZ =  53.
+}

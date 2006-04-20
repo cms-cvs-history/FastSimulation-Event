@@ -1,0 +1,10 @@
+PSet VertexGenerator = 
+{
+	string type = "Gaussian"
+        double MeanX = 0.
+        double MeanY = 0.
+        double MeanZ = 0.
+        double SigmaX = 0.015
+        double SigmaY = 0.015
+        double SigmaZ = 53.
+}
