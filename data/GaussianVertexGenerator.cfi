@@ -1,10 +1,11 @@
 PSet VertexGenerator = 
 {
 	string type = "Gaussian"
+# Distance in centimeters. 
         double MeanX = 0.
         double MeanY = 0.
         double MeanZ = 0.
-        double SigmaX = 0.015
-        double SigmaY = 0.015
-        double SigmaZ = 53.
+        double SigmaX = 0.0015
+        double SigmaY = 0.0015
+        double SigmaZ = 5.3
 }
