@@ -1,10 +1,12 @@
 PSet VertexGenerator = 
 {
+# Distances in cm
 	string type = "Flat"
-        double MinX = -0.015
-        double MaxX =  0.015
-        double MinY = -0.015
-        double MaxY =  0.015
-        double MinZ = -53.
-        double MaxZ =  53.
+        double MinX = -0.0015
+        double MaxX =  0.0015
+        double MinY = -0.0015
+        double MaxY =  0.0015
+        double MinZ = -5.3
+        double MaxZ =  5.3
+	int32 seed = 12345
 }

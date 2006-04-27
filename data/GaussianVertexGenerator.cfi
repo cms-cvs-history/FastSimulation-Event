@@ -8,4 +8,5 @@ PSet VertexGenerator =
         double SigmaX = 0.0015
         double SigmaY = 0.0015
         double SigmaZ = 5.3
+	int32 seed = 12345
 }
