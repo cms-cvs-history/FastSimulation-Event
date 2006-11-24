@@ -8,5 +8,4 @@ PSet VertexGenerator =
         double MaxY =  0.0015
         double MinZ = -5.3
         double MaxZ =  5.3
-	int32 seed = 12345
 }

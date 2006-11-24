@@ -1,5 +1,4 @@
 PSet VertexGenerator = 
 {
 	string type = "None"
-	int32 seed = 0
 }
