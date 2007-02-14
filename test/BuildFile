@@ -1,0 +1,12 @@
+<use name=root>
+<use name=FWCore/Framework>
+<use name=SimDataFormats/Track>
+<use name=FWCore/ParameterSet>
+<use name=FastSimulation/Event>
+<use name=FastSimulation/Particle>
+<use name=FastSimulation/Utilities>
+<use name=DQMServices/CoreROOT>
+
+<library file=testEvent.cc name=testEvent>
+<flags SEAL_PLUGIN_NAME="testEvent">
+</library>
