@@ -8,5 +8,5 @@
 <use name=DQMServices/CoreROOT>
 
 <library file=testEvent.cc name=testEvent>
-<flags EDM_PLUGIN=1>
+<flags SEAL_PLUGIN_NAME="testEvent">
 </library>
