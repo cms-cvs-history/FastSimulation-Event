@@ -1,10 +1,10 @@
 PSet ParticleFilter =
 {
-# Particles with |eta| > etaMax (momentum direction at primary vertex) 
-# are not simulated 
-	double etaMax = 5.0
-# Charged particles with pT < pTMin (GeV/c) are not simulated
-	double pTMin =  0.200
-# Particles with energy smaller than EMin (GeV) are not simulated
-	double EMin = 0.100
+    # Particles with |eta| > etaMax (momentum direction at primary vertex) 
+    # are not simulated 
+    double etaMax = 5.0
+    # Charged particles with pT < pTMin (GeV/c) are not simulated
+    double pTMin =  0.200
+    # Particles with energy smaller than EMin (GeV) are not simulated
+    double EMin = 0.100
 }
