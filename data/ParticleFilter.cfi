@@ -7,4 +7,6 @@ PSet ParticleFilter =
     double pTMin =  0.200
     # Particles with energy smaller than EMin (GeV) are not simulated
     double EMin = 0.100
+    # Protons with energy larger than EProtons (GeV) are all kept
+    double EProton = 5000.
 }
