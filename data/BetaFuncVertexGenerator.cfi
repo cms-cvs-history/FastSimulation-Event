@@ -1,0 +1,15 @@
+PSet VertexGenerator = 
+{
+    string type = "BetaFunc"
+    # Units are cm and radians
+    double X0 =        0.05
+    double Y0 =        0.
+    double Z0 =        0.
+    double SigmaZ =    7.55
+    # angle of the crossing plane 0 degrees means XZ plane
+    double Alpha =     0.
+    # half-crossing beam angle
+    double Phi =       142.0e-6
+    double BetaStar =  55.
+    double Emittance = 5.03e-8    
+}

@@ -1,0 +1,27 @@
+
+# HYPOTHETICAL BEAM SCENARIO FOR TESTING RECO ALGORITHMS
+#    EARLY COLLISION (pp 7+7 TeV)
+#
+# this module takes inpuut in the units of *cm* !!!
+#
+# Values taken from LHC optics simulation V6.5:
+# see http://proj-lhc-optics-web.web.cern.ch/proj-lhc-optics-web/V6.500/IR5.html
+# We are asumming zero crossing angles
+#
+replace famosSimHits.VertexGenerator.X0 =        0.2
+replace famosSimHits.VertexGenerator.Y0 =        0.0250
+replace famosSimHits.VertexGenerator.Z0 =        0.
+replace famosSimHits.VertexGenerator.SigmaZ =    7.55
+replace famosSimHits.VertexGenerator.Alpha =     0.
+replace famosSimHits.VertexGenerator.Phi =       0.
+replace famosSimHits.VertexGenerator.BetaStar =  55.
+replace famosSimHits.VertexGenerator.Emittance = 5.03e-8
+
+replace famosPileUp.VertexGenerator.X0 =        0.2
+replace famosPileUp.VertexGenerator.Y0 =        0.0250
+replace famosPileUp.VertexGenerator.Z0 =        0.
+replace famosPileUp.VertexGenerator.SigmaZ =    7.55
+replace famosPileUp.VertexGenerator.Alpha =     0.
+replace famosPileUp.VertexGenerator.Phi =       0.
+replace famosPileUp.VertexGenerator.BetaStar =  55.
+replace famosPileUp.VertexGenerator.Emittance = 5.03e-8
