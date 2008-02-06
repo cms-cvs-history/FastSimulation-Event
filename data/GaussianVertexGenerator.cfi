@@ -1,11 +1,6 @@
+include "IOMC/EventVertexGenerators/data/VtxSmearedParameters.cfi" 
 PSet VertexGenerator = 
 {
-	string type = "Gaussian"
-# Distance in centimeters. 
-        double MeanX = 0.
-        double MeanY = 0.
-        double MeanZ = 0.
-        double SigmaX = 0.0015
-        double SigmaY = 0.0015
-        double SigmaZ = 5.3
+    string type = "Gaussian"
+    using GaussVtxSmearingParameters
 }

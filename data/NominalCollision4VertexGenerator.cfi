@@ -1,6 +1,6 @@
 include "IOMC/EventVertexGenerators/data/VtxSmearedParameters.cfi" 
 PSet VertexGenerator = 
-{
-    string type = "Flat"
-    using FlatVtxSmearingParameters
-}
+  {
+    string type = "BetaFunc"
+    using NominalCollision4VtxSmearingParameters
+  }
