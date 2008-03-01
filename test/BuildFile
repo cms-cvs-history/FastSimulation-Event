@@ -5,7 +5,7 @@
 <use name=FastSimulation/Event>
 <use name=FastSimulation/Particle>
 <use name=FastSimulation/Utilities>
-<use name=DQMServices/CoreROOT>
+<use name=DQMServices/Core>
 
 <library file=testEvent.cc name=testEvent>
 <flags EDM_PLUGIN=1>
