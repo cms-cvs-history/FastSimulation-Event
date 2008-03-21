@@ -1,5 +1,5 @@
 include "IOMC/EventVertexGenerators/data/VtxSmearedParameters.cfi" 
-PSet VertexGenerator = 
+block myVertexGenerator = 
 {
     string type = "Flat"
     using FlatVtxSmearingParameters
