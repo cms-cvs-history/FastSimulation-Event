@@ -1,4 +1,4 @@
-PSet VertexGenerator = 
+block myVertexGenerator = 
 {
     string type = "BetaFunc"
     # Units are cm and radians
