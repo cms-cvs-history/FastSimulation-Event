@@ -1,4 +1,8 @@
-PSet VertexGenerator = 
-{
+
+block NoVertexGeneratorBlock = {
+  PSet VertexGenerator = 
+  {
 	string type = "None"
+  }
 }
+
