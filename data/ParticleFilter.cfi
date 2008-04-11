@@ -1,5 +1,7 @@
-PSet ParticleFilter =
-{
+block ParticleFilterBlock = {
+
+  PSet ParticleFilter =
+  {
     # Particles with |eta| > etaMax (momentum direction at primary vertex) 
     # are not simulated 
     double etaMax = 5.0
@@ -9,4 +11,6 @@ PSet ParticleFilter =
     double EMin = 0.100
     # Protons with energy larger than EProtons (GeV) are all kept
     double EProton = 5000.
+  }
+
 }
