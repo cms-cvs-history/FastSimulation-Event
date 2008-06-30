@@ -1,5 +1,0 @@
-include "IOMC/EventVertexGenerators/data/VtxSmearedParameters.cfi" 
-block myVertexGenerator =  {
-    string type = "BetaFunc"
-    using EarlyCollisionVtxSmearingParameters
-  }
