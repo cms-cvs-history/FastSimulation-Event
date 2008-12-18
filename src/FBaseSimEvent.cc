@@ -491,8 +491,8 @@ FBaseSimEvent::addParticles(const HepMC::GenEvent& myGenEvent) {
     if ( productionVertex ) { 
       unsigned productionMother = productionVertex->particles_in_size();
       if ( productionMother ) {
-	unsigned motherId = (*(primaryVertex->particles_in_const_begin()))->pdg_id();
-	if ( abs(motherId) < 1000000 ) 
+	int productionMotherId = (*(productionVertex->particles_in_const_begin()))->pdg_id();
+	if ( abs(productionMotherId) < 1000000 )
 	  productionVertexPosition = 
 	    XYZTLorentzVector(productionVertex->position().x()/10.,
 			      productionVertex->position().y()/10.,
@@ -500,6 +500,7 @@ FBaseSimEvent::addParticles(const HepMC::GenEvent& myGenEvent) {
 			      productionVertex->position().t()/10.) + smearedVertex;
       }
     }
+
     if ( productionVertexPosition.Perp2() > lateVertexPosition ) continue;
 
 
@@ -673,8 +674,8 @@ FBaseSimEvent::addParticles(const reco::GenParticleCollection& myGenParticles) {
     XYZTLorentzVector productionVertexPosition(0.,0.,0.,0.);
     const reco::Candidate* productionMother = p.numberOfMothers() ? p.mother(0) : 0;
     if ( productionMother ) {
-      unsigned motherId = productionMother->pdgId();
-      if ( abs(motherId) < 1000000 )
+      int productionMotherId = productionMother->pdgId();
+      if ( abs(productionMotherId) < 1000000 )
 	productionVertexPosition = XYZTLorentzVector(p.vx(), p.vy(), p.vz(), 0.) + smearedVertex;
     }
     if ( productionVertexPosition.Perp2() > lateVertexPosition ) continue;
