@@ -63,8 +63,9 @@ bool KineParticleFilter::isOKForMe(const RawParticle* p) const
 
   // Vertices are coming with pId = 0
   if ( pId != 0 ) { 
-    bool particleCut = ( pId > 10  && pId != 12 && pId != 14 && 
-			 pId != 16 && pId != 18 && pId != 21 &&
+    //    bool particleCut = ( pId > 10  && pId != 12 && pId != 14 && 
+    bool particleCut = ( pId > 10  && 
+			 pId != 21 &&
 			 (pId < 23 || pId > 40  ) &&
 			 (pId < 81 || pId > 100 ) && pId != 2101 &&
 			 pId != 3101 && pId != 3201 && pId != 1103 &&
