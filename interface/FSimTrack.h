@@ -61,11 +61,32 @@ class FSimTrack : public SimTrack {
   /// Ith daughter
   inline const FSimTrack& daughter(int i) const;
 
+  /// Ith layer
+  inline const int layerNum(int i) const;
+
+  /// Ith layer
+  inline const double layerRadL(int i) const;
+
+  /// Ith layer
+  inline const double layerRpos(int i) const;
+
+  /// Ith layer
+  inline const double layerZpos(int i) const;
+
   /// Number of daughters
   inline int nDaughters() const;
 
+  /// Number of layers crossed
+  inline int nLayers() const;
+
   /// Vector of daughter indices
   inline const std::vector<int>& daughters() const;
+
+  /// Vector of layers crossed
+  inline const std::vector<int>& layerNums() const;
+
+  /// Vector of layers crossed
+  inline const std::vector<double>& layerRadLs() const;
 
   /// no end vertex
   inline bool  noEndVertex() const;
@@ -164,7 +185,7 @@ class FSimTrack : public SimTrack {
   /// Get the index of the closest charged daughter
   inline int closestDaughterId() const { return closestDaughterId_; }
 
-  /// Temporary (until move of SimTrack to Mathcore) - No! Actually very useful
+  /// Temporary (until move of SimTrack to Mathcore)  - No! Actually very useful
   const XYZTLorentzVector& momentum() const { return momentum_; }
 
   /// Reset the momentum (to be used with care)
@@ -175,6 +196,18 @@ class FSimTrack : public SimTrack {
 
   /// Return the pre-defined decay time
   inline double decayTime() const { return properDecayTime; }
+
+  /// Update the vactors of layer numbers crossed
+  inline void addLayerNum(int i) { layernums_.push_back(i); }
+
+  /// Update the vactors of layer numbers crossed
+  inline void addLayerRadL(double r) { layerradls_.push_back(r); }
+
+  /// Update the vactors of layer numbers crossed
+  inline void addLayerRpos(double r) { layerRposs_.push_back(r); }
+
+  /// Update the vactors of layer numbers crossed
+  inline void addLayerZpos(double r) { layerZposs_.push_back(r); }
 
  private:
 
@@ -200,7 +233,12 @@ class FSimTrack : public SimTrack {
   RawParticle HCAL_Entrance;   // the particle at HCAL entrance
   RawParticle VFCAL_Entrance;  // the particle at VFCAL entrance
 
+
   std::vector<int> daugh_; // The indices of the daughters in FSimTrack
+  std::vector<int> layernums_; // The layers crossed by the FSimTrack
+  std::vector<double> layerradls_; // The radiation lengths of the layers crossed by the FSimTrack
+  std::vector<double> layerRposs_; // The radii of the layers crossed by the FSimTrack
+  std::vector<double> layerZposs_; // The Z positions of the layers crossed by the FSimTrack
   int closestDaughterId_; // The index of the closest daughter id
 
   const HepPDT::ParticleData* info_; // The PDG info

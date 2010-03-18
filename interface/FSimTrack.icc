@@ -11,12 +11,40 @@ inline const FSimTrack& FSimTrack::daughter(int i) const {
   return abs(type()) != 11 ? endVertex().daughter(i) : mom_->track(daugh_[i]); 
 }
 
+inline const int FSimTrack::layerNum(int i) const { 
+   return layernums_[i]; 
+}
+
+inline const double FSimTrack::layerRadL(int i) const { 
+   return layerradls_[i]; 
+}
+
+inline const double FSimTrack::layerRpos(int i) const { 
+   return layerRposs_[i]; 
+}
+
+inline const double FSimTrack::layerZpos(int i) const { 
+   return layerZposs_[i]; 
+}
+
 inline int FSimTrack::nDaughters() const { 
   return abs(type()) != 11 ? endVertex().nDaughters() : daugh_.size(); 
 }
 
+inline int FSimTrack::nLayers() const { 
+  return layernums_.size(); 
+}
+
 inline const std::vector<int>& FSimTrack::daughters() const { 
   return abs(type()) != 11 ? endVertex().daughters() : daugh_; 
+}
+
+inline const std::vector<int>& FSimTrack::layerNums() const { 
+  return layernums_; 
+}
+
+inline const std::vector<double>& FSimTrack::layerRadLs() const { 
+  return layerradls_; 
 }
 
 inline bool FSimTrack::noEndVertex() const { 
