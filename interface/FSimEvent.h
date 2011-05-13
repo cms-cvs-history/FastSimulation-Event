@@ -9,6 +9,7 @@
 
 // FAMOS Headers
 #include "FastSimulation/Event/interface/FBaseSimEvent.h"
+#include "FastSimulation/Event/interface/FSimTrackContainer.h"
  
 /** The FAMOS SimEvent: inherits from FBaseSimEvent,
  *  where the latter provides FAMOS-specific event features (splitting
@@ -68,6 +69,7 @@ public:
   /// Load containers of tracks (and muons) and vertices for the edm::Event
   void load(edm::SimTrackContainer & c, edm::SimTrackContainer & m) const;
   void load(edm::SimVertexContainer & c) const;
+  void load(edm::FSimTrackContainer & c) const;
   void load(FSimVertexTypeCollection & c) const;
 
 private:

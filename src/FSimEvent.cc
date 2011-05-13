@@ -101,7 +101,15 @@ FSimEvent::load(FSimVertexTypeCollection & c) const
   }
 }
 
-
+void
+FSimEvent::load(edm::FSimTrackContainer & c) const
+{
+  for (unsigned int i=0; i<nTracks(); ++i) {
+    const FSimTrack& t = track(i);
+    // Save all tracks
+    c.push_back(t);
+  }
+}
 
 
 
